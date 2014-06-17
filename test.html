@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Untitled Document</title>
+    <script src="underscore.js" type="text/javascript"></script>
+    <script src="jquery-1.11.1.min.js" ></script>
+</head>
+<body>
+
+<script id="mytemplate" type="anytype_except_javascript">
+    <p><%- firstName %></p>
+    <p><%- lastname %></p>
+    
+</script>
+
+
+<!-- this script should be in some other separate js file -->
+<script>
+    var source = $('#mytemplate').html();
+    console.log(source);
+    
+    var underscoreObject = _.template(source);
+    var endProduct = underscoreObject({firstName:'shubhada',lastname:'kutti'});
+    console.log(endProduct);
+    
+    
+
+    
+</script>
+
+</body>
+</html>
